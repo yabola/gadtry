@@ -5,6 +5,7 @@ package com.github.harbby.gadtry.java8Test;
  */
 public interface LambdaBean {
     public static void testLambda(MyBean... beans){
+        System.out.println(beans.length);
         System.out.println("????");
     }
 }

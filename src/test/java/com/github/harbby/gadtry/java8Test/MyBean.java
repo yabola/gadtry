@@ -5,6 +5,6 @@ package com.github.harbby.gadtry.java8Test;
  */
 @FunctionalInterface
 public  interface MyBean {
-    public MyBean comput(BinderTest binderTest);
+    public void comput(BinderTest binderTest);
 //    public MyBean comput2();
 }

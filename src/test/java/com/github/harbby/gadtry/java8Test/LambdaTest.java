@@ -12,7 +12,7 @@ public class LambdaTest {
     public static void main(String[] args) {
         Runnable r = () -> System.out.println("hello world");
 //        System.out::println("?");
-       testLambda((bean) -> bean.bind());
+       testLambda(bean -> bean.bind());
 
         List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7);
         list.forEach(n -> System.out.println(n));
