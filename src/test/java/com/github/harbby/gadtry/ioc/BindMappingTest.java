@@ -38,6 +38,18 @@ public class BindMappingTest
     @Test
     public void bindMappingToString()
     {
+        Binder binder2 = new Binder() {
+            @Override
+            public <T> void bind(Class<T> key, T instance) {
+
+            }
+
+            @Override
+            public <T> BinderBuilder<T> bind(Class<T> key) {
+                return null;
+            }
+        };
+//        binder2.bind(Map.class, new HashMap());
         IocFactory iocFactory = IocFactory.create(binder -> binder.bind(Map.class, new HashMap()));
         BindMapping bindMapping = iocFactory.getAllBeans();
         Assert.assertEquals(bindMapping.getAllBeans().size(), 1);
